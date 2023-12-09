@@ -1,0 +1,254 @@
+<!--
+	Autor: [Tu Brayan Steven Mora Velandia]
+	Fecha: [10/10/23]
+	Contacto: [stevens1210@icloud.com]
+
+	Descripción: [Este proyecto es un sitio web dedicado al café y su preparación. La página incluye una sección de navegación con un menú, un banner principal con un llamativo lema, una sección que detalla la preparación de diferentes tipos de café (Espresso, Cappuccino, Frappe), otra sección que proporciona consejos relacionados con el café y una sección de pie de página con una cita relacionada con el café.]
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Anteiku Coffee</title>
+	<link rel="stylesheet" href="styles.css" />
+	<link rel="icon" href="./img/anteiku.png">
+</head>
+
+<body>
+	<!-- Header: Logo and navigation menu. -->
+	<header>
+		<div class="container-navbar">
+			<nav class="navbar container">
+				<div class="navbar-logo"><img src="./img/anteiku.png" alt=""></div>
+				<div>
+					<ol class="menu">
+						<li><a href="#">Inicio</a></li>
+						<li><a href="#Preparation">Preparación</a></li>
+						<li><a href="#Tips">Tips</a></li>
+					</ol>
+				</div>
+			</nav>
+			<!-- Banner: Main message and button. -->
+			<section class="banner">
+				<div class="content-banner">
+					<div class="main-title">
+						<h2> La vida empieza después del café </h2>
+					</div>
+					<div class="slogan">
+						<p> Descubre el placer de disfrutar una taza de café perfecta, <br> hecha por ti mismo</p>
+					</div>
+					<div class="main-button"> <a href="#Preparation">¡Comienza ahora!</a> </div>
+				</div>
+			</section>
+		</div>
+	</header>
+	<!-- Preparations: Types of coffee. -->
+	<section class="container preparations">
+		<h1 id="Preparation" class="second-title">Preparación</h1>
+		<div class="container-preparations">
+			<div class="card-prepare category-espresso">
+				<p class="card-title-cafe">Espresso</p>
+				<input type="checkbox" id="btn-modal-espresso">
+				<label for="btn-modal-espresso" class="lbl-modal">Preparar</label>
+				<div class="modal">
+					<div class="container-modal espresso">
+						<header>
+							<img src="./img/anteiku.png" alt="">
+							<label for="btn-modal-espresso">
+								<i class="fa-solid fa-x"></i>
+							</label>
+						</header>
+						<main class="content-modal">
+							<div class="modal-instructions">
+								<h2>Espresso</h2>
+								<p></p>
+								<h3>Ingredientes</h3>
+								<ul>
+									<li>Café molido</li>
+									<li>Agua caliente</li>
+								</ul>
+								<h3>Instrucciones</h3>
+								<ol>
+									<li>Poner café molido en la cafetera.</li>
+									<li>Agregar agua caliente al café.</li>
+									<li>Esperar unos segundos y servir.</li>
+								</ol>
+							</div>
+							<div class="modal-image">
+								<img src="./img/Espressoonly.png" alt="">
+							</div>
+						</main>
+					</div>
+				</div>
+			</div>
+			<div class="card-prepare category-cappuccino">
+				<p class="card-title-cafe">Cappuccino</p>
+				<input type="checkbox" id="btn-modal-cappuccino">
+				<label for="btn-modal-cappuccino" class="lbl-modal">Preparar</label>
+				<div class="modal">
+					<div class="container-modal">
+						<header>
+							<img src="./img/anteiku.png" alt="">
+							<label for="btn-modal-cappuccino">
+								<i class="fa-solid fa-x"></i>
+							</label>
+						</header>
+						<main class="content-modal">
+							<div class="modal-instructions">
+								<h2>Cappuccino</h2>
+								<p></p>
+								<h3>Ingredientes</h3>
+								<ul>
+									<li>1 shot de espresso</li>
+									<li>1/3 taza de leche caliente</li>
+									<li>1/3 taza de espuma de leche</li>
+									<li>Azúcar al gusto (opcional)</li>
+								</ul>
+								<h3>Instrucciones</h3>
+								<ol>
+									<li>Prepara un shot de espresso en una taza.</li>
+									<li>Calienta la leche hasta que esté caliente pero no hirviendo.</li>
+									<li>Usa una máquina de espuma o un vaporizador de leche para crear espuma de leche.
+									</li>
+									<li>Vierte la leche caliente en la taza con el espresso.</li>
+									<li>Agrega la espuma de leche por encima.</li>
+									<li>Sirve caliente y, si lo deseas, endulza con azúcar al gusto.</li>
+								</ol>
+							</div>
+							<div class="modal-image">
+								<img src="./img/cappuccinonly.png" alt="">
+							</div>
+						</main>
+					</div>
+				</div>
+			</div>
+			<div class="card-prepare category-frappe">
+				<p class="card-title-cafe">Frappe</p>
+				<input type="checkbox" id="btn-modal-frappe">
+				<label for="btn-modal-frappe" class="lbl-modal">Preparar</label>
+				<div class="modal">
+					<div class="container-modal">
+						<header>
+							<img src="./img/anteiku.png" alt="">
+							<label for="btn-modal-frappe">
+								<i class="fa-solid fa-x"></i>
+							</label>
+						</header>
+						<main class="content-modal">
+							<div class="modal-instructions">
+								<h2>Frappe</h2>
+								<p></p>
+								<h3>Ingredientes</h3>
+								<ul>
+									<li>1 taza de café frío</li>
+									<li>1/2 taza de leche</li>
+									<li>2 cucharadas de azúcar (ajusta al gusto)</li>
+									<li>2 tazas de hielo picado</li>
+									<li>Crema batida (opcional)</li>
+									<li>Chocolate rallado o cacao en polvo (opcional)</li>
+								</ul>
+								<h3>Instrucciones</h3>
+								<ol>
+									<li>En una licuadora, combina el café frío, la leche, el azúcar y el hielo picado.
+									</li>
+									<li>Mezcla todo hasta que la mezcla esté suave y el hielo esté completamente
+										triturado.</li>
+									<li>Sirve el Frappé en un vaso alto.</li>
+									<li>Si lo deseas, decora con crema batida y espolvorea chocolate rallado o cacao en
+										polvo por encima.</li>
+									<li>Sirve frío y disfruta.</li>
+								</ol>
+							</div>
+							<div class="modal-image">
+								<img src="./img/frappeonly.png" alt="">
+							</div>
+						</main>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Tips: Useful information about coffee. -->
+	<section class="container tips">
+		<h1 id="Tips" class="second-title">Tips</h1>
+
+		<div class="container-tips">
+			<div class="card-tips">
+				<div class="container-img">
+					<img src="img/Café-Arábica-e-Robusta.jpg" alt="Imagen Blog 1" />
+				</div>
+				<div class="content-tips">
+					<h3>Tipo de granos</h3>
+					<span>Café arábica</span>
+					<p>
+						Originario de Etiopía, es un tipo popular de café especial. Es conocido por su delicado y
+						matizado perfil de sabor, con notas de azúcar, fruta, acidez y cuerpo.
+					</p>
+					<span>Café robusta</span>
+					<p>
+						Originario del Congo, es un tipo de grano de café que se caracteriza por su mayor contenido en
+						cafeína y su sabor amargo.
+					</p>
+					<div class="btn-read-more">Leer más</div>
+				</div>
+			</div>
+			<div class="card-tips">
+				<div class="container-img">
+					<img src="img/types.jpeg" alt="Imagen Blog 2" />
+				</div>
+				<div class="content-tips">
+					<h3>Tipos de preparación</h3>
+					<span>Calientes</span>
+					<p>
+						Cappuccino, Espresso, Latte, Bombón, Macchiato, Panna, Irlandés, Dalgona, Doppio, Breve, Mocha,
+						Carajillo, Flat White, Baileys, americano, cortado, turco, vienés.
+					</p>
+					<span>Frios</span>
+					<p>
+						Cold Brew, Affogato, Cold Drip, Nitro Café, Café Tonic, Ice Latte, Ice Cappuccino, Los Frappes,
+						Eiskaffee, Azteca.
+					</p>
+					<div class="btn-read-more">Leer más</div>
+				</div>
+			</div>
+			<div class="card-tips">
+				<div class="container-img">
+					<img src="img/nueva-york-cafe-hd.jpg" alt="Imagen Blog 3" />
+				</div>
+				<div class="content-tips">
+					<h3> Top mejores cafererias del mundo</h3>
+					<span>Café New York, Budapest</span>
+					<p>
+						Localizado en Hungría, Ubicado en la planta baja del hotel Boscolo,es para muchos la mejor
+						cafetería de todo el mundo.Encuentro de artistas a principios del siglo XX.
+					</p>
+					<span>Café Central, Viena</span>
+					<p>
+						Localizado en un antiguo palacio vienés, el Café Central tiene lo que hace falta para disfrutar
+						de un café como todo un miembro de la realeza
+					</p>
+					<div class="btn-read-more">Leer más</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	</main>
+	<!-- Footer: Final sentence. -->
+	<footer class="footer">
+		<div class="container container-footer">
+			<div class="phrase">
+				<p>
+					El café es la mejor medicina.
+				</p>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

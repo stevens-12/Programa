@@ -1,0 +1,588 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+	--primary-color: #c7a17a;
+	--background-color: #f9f5f0;
+	--dark-color: #151515;
+}
+
+html {
+	scroll-behavior: smooth;
+	font-size: 62.5%;
+	font-family: "Poppins", sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* ********************************** */
+/*             UTILITIES             */
+/* ********************************** */
+.container {
+	max-width: 120rem;
+	margin: 0 auto;
+}
+
+.second-title {
+	text-align: center;
+	font-weight: 500;
+	font-size: 3rem;
+}
+
+/* ********************************** */
+/*               HEADER               */
+/* ********************************** */
+
+/* ************* NAVBAR ************* */
+.container-navbar {
+	background-image: linear-gradient(100deg, #000000, #00000020),
+		url("img/gallery1.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+.navbar{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 3rem;
+}
+
+.navbar .fa-bars {
+	display: none;
+}
+
+.navbar-logo img{
+	width: 4rem;
+	height: 4rem;
+}
+
+.menu {
+	display: flex;
+	gap: 2rem;
+}
+
+.menu li {
+	list-style: none;
+}
+
+.menu a {
+	text-decoration: none;
+	font-size: 1.4rem;
+	color: var(--background-color);
+	font-weight: 600;
+	text-transform: uppercase;
+	position: relative;
+}
+
+.menu a::after {
+	content: "";
+	width: 2rem;
+	height: 0.1rem;
+	background-color: var(--primary-color);
+	position: absolute;
+	bottom: -3px;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	opacity: 0;
+	transition: all 0.3s ease;
+}
+
+.menu a:hover::after {
+	opacity: 1;
+}
+
+.menu a:hover {
+	color: var(--primary-color);
+}
+
+/* ********************************** */
+/*               BANNER               */
+/* ********************************** */
+.banner {
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	height: 60rem;;
+}
+
+.content-banner {
+	display: grid;
+	justify-items: center;
+	align-items: center;
+}
+
+.content-banner .slogan span {
+	font-size: 4rem;
+	margin: 1rem;
+}
+
+.content-banner .slogan p {
+	color: var(--primary-color);
+	font-size: 1.6rem;
+	margin: 1rem;
+	font-weight: 500;
+	text-align: center;
+}
+
+.content-banner .main-title {
+	border-top: solid 0.5rem var(--primary-color);
+}
+
+.content-banner .main-title h2 {
+	color: var(--background-color);
+	font-size: 4rem;
+	font-weight: 500;
+	padding-top: 1rem;
+}
+
+.content-banner .main-button a {
+	text-decoration: none;
+	display: grid;
+	padding: 1rem 3rem;
+	color: var(--background-color);
+	background-color: var(--primary-color);
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	border-radius: 4rem;
+}
+
+.content-banner .main-button a:hover {
+	background-color: var(--dark-color);
+}
+
+
+/* ********************************** */
+/*            MAIN CONTENT            */
+/* ********************************** */
+.main-content {
+	background-color: var(--background-color);
+}
+
+/* ********************************** */
+/*              FEATURES              */
+/* ********************************** */
+
+/* ********************************** */
+/*             PREPARATION            */
+/* ********************************** */
+
+.preparations {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+}
+
+.container-preparations {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+	margin: 2rem;
+}
+
+.card-prepare {
+	height: 40rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 2rem;
+	gap: 2rem;
+}
+
+.category-frappe {
+	background-image: linear-gradient(#00000080, #00000080),
+		url("img/Frappe.jpg");
+	background-size: cover;
+	background-position: bottom;
+	background-repeat: no-repeat;
+}
+
+.category-cappuccino {
+	background-image: linear-gradient(#00000080, #00000080),
+		url("img/cappuccino.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.category-espresso {
+	background-image: linear-gradient(#00000080, #00000080),
+		url("img/espresso.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.card-prepare .card-title-cafe {
+	font-size: 2.8rem;
+	color: var(--background-color);
+	text-transform: capitalize;
+	border-bottom: dotted 0.4rem  var(--background-color);
+	padding: 1rem;
+	border-radius: 2rem;
+}
+
+.card-prepare .lbl-modal {
+	list-style: none;
+	font-size: 2rem;
+	color: var(--background-color);
+	cursor: pointer;
+}
+
+.card-prepare .lbl-modal:hover {
+	color: var(--primary-color);
+}
+
+/* ********************************** */
+/*                MODAL           	  */
+/* ********************************** */
+
+.modal {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	transition: all 500ms ease;
+	opacity: 0;
+	visibility: hidden;
+}
+
+#btn-modal-espresso,
+#btn-modal-frappe,
+#btn-modal-cappuccino {
+	border: none;
+	display: none;
+}
+
+#btn-modal-espresso:checked ~ .modal{
+	opacity: 1;
+	visibility: visible;
+}
+
+#btn-modal-cappuccino:checked ~ .modal{
+	opacity: 1;
+	visibility: visible;
+}
+
+#btn-modal-frappe:checked ~ .modal{
+	opacity: 1;
+	visibility: visible;
+}
+
+.container-modal {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	grid-template-columns: 1fr;
+	position: relative;
+	max-width: 90rem;
+	margin: 2rem;
+	background: var(--primary-color);
+	border-radius: 2rem;
+	box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
+	transition: all 500ms ease;
+	transform: translateY(0%);
+	z-index: 1;
+}
+
+.container-modal .espresso {
+	max-width: 700px;
+	max-height: 400px;
+}
+.container-modal header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 2rem;
+}
+.container-modal header img {
+	width: 3.2rem;
+	height: 3.2rem;
+}
+
+.container-modal label{
+	color: var(--background-color);
+	cursor: pointer;
+}
+
+.container-modal label .fa-solid {
+	font-size: small;
+}
+
+.content-modal {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.content-modal .modal-instructions {
+	display: flex;
+	flex-direction: column;
+}
+
+.content-modal .modal-instructions h2 {
+	display: flex;
+	align-self: center;
+	text-align: center;
+	font-weight: bold;
+	font-size: 4rem;
+	color: var(--background-color);
+}
+
+.content-modal .modal-instructions h3 {
+	font-weight: bold;
+	font-size: 2rem;
+	color: var(--background-color);
+	padding: 1rem;
+	margin-left: 1rem;
+}
+
+.content-modal .modal-instructions ul  {
+	font-size: 1.4rem;
+	color: var(--background-color);
+	padding: 0.5rem;
+	margin-left: 6rem;
+}
+
+.content-modal .modal-instructions ol  {
+	font-size: 1.4rem;
+	color: var(--background-color);
+	padding: 0.5rem;
+	margin-left: 6rem;
+	margin-bottom: 2rem;
+}
+
+.container-modal .modal-image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container-modal .modal-image img{
+	position: absolute;
+	width: 60%;
+	height: 90%;
+	margin-top: 15rem;
+}
+
+
+/* ********************************** */
+/*                TYPES           	  */
+/* ********************************** */
+.tips {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.container-tips {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+	margin: 2rem;
+}
+.container-img {
+	height: 30rem;
+}
+
+.container-img img {
+	width: 100%;
+	height: 100%;
+	background-size:cover;
+	border-radius: 2rem;
+}
+
+.card-tips {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.content-tips h3 {
+	font-size: 1.8rem;
+	margin-bottom: 1.7rem;
+	color: var(--dark-color);
+	font-weight: 500;
+}
+
+.content-tips h3:hover {
+	color: var(--primary-color);
+	cursor: pointer;
+}
+
+.content-tips p {
+	margin: .5rem;
+	font-size: 1.4rem;
+	color: #777;
+}
+
+.content-tips span {
+	list-style: none;
+	color: var(--primary-color);
+	font-size: 1.3rem;
+}
+
+.btn-read-more {
+	padding: 1rem 3rem;
+	background-color: var(--primary-color);
+	color: var(--background-color);
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	border-radius: 2rem;
+	margin: 3rem 0 5rem;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.btn-read-more:hover {
+	background-color: var(--dark-color);
+}
+
+/* ********************************** */
+/*               FOOTER               */
+/* ********************************** */
+
+.footer {
+	background-color: var(--primary-color);
+}
+
+.container-footer {
+	display: flex;
+	flex-direction: column;
+	padding: 3rem;
+}
+
+.phrase {
+	display: flex;
+	justify-content: center;
+}
+
+.phrase p {
+	font-weight: 400;
+	font-size: 1.6rem;
+}
+
+/* ********************************** */
+/*       MEDIA QUERIES -- 768px       */
+/* ********************************** */
+@media (max-width: 768px) {
+	html {
+		font-size: 42.5%;
+	}
+	.content-banner .main-title h2{
+		font-size: 3.4rem;
+	}
+	.content-banner .slogan p{
+		font-size: 1.8rem;
+	}
+	.content-banner .main-button a{
+		font-size: 1.6rem;
+	}
+
+	.second-title {
+		font-size: 2.8rem;
+	}
+
+	.tips {
+		display: grid;
+		justify-content: center;
+		padding: 2rem;
+	}
+
+	.container-tips {
+		max-width: 500px;
+		grid-template-columns: 1fr;
+		height: 75rem;
+		justify-content: center;
+		align-items: center;
+	}
+	.container-img {
+		width: 100%;
+		height: 40rem;
+	}
+	.content-tips h3 {
+		display: grid;
+		justify-items: center;
+		font-size: 2.4rem;
+	}
+
+	.content-tips span {
+		font-size: 1.8rem;
+	}
+
+	.content-tips p {
+		font-size: 2.2rem;
+	}
+
+	.btn-read-more {
+		display: grid;
+		justify-items: center;
+		align-items: center	;
+		font-size: 1.8rem;
+	}
+	.footer {
+		display: none;
+	}
+}
+
+/* ********************************** */
+/*       MEDIA QUERIES -- 468px       */
+/* ********************************** */
+@media (max-width: 468px) {
+	html {
+		font-size: 42.5%;
+	}
+
+	.content-banner {
+		max-width: 50rem;
+		padding: 22rem 0;
+	}
+	.content-banner .main-title h2{
+		font-size: 3rem;
+	}
+	.content-banner .slogan p{
+		font-size: 1.6rem;
+	}
+	.content-banner .main-button a{
+		font-size: 1.4rem;
+	}
+
+	.second-title {
+		font-size: 2.4rem;
+	}
+
+	.tips {
+		padding: 2rem;
+	}
+
+	.content-tips h3 {
+		font-size: 2.4rem;
+	}
+
+	.content-tips span {
+		font-size: 1.8rem;
+	}
+
+	.content-tips p {
+		font-size: 2rem;
+	}
+
+	.btn-read-more {
+		font-size: 1.8rem;
+	}
+	.footer {
+		display: none;
+	}
+}
